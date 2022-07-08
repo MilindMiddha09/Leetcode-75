@@ -1,0 +1,15 @@
+def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        
+        node_map = set()
+        while head:             
+            if head in node_map: 
+                return head
+            
+            node_map.add(head)
+            head = head.next
+        
+        return
